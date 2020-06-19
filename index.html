@@ -15,7 +15,6 @@
     </video>
     </div>
     <div id="test">
-        
         hello hello hello<br>
         hello hello hello<br>
         hello hello hello<br>
@@ -41,35 +40,23 @@
           setHeight.style.height = Math.floor(vid.duration) * playbackConst + 100 + "px";
         });
 
-/*
-        // Use requestAnimationFrame for smooth playback
-        function scrollPlay(){  
-            frameNumber  = window.pageYOffset/playbackConst;
-            vid.currentTime  = frameNumber;
-            window.requestAnimationFrame(scrollPlay);
-        }
-*/
         document.addEventListener("scroll", function() {
         let rect = vid.getBoundingClientRect();
         if (rect.top <= 50 && !vid.ended) {
             vid.classList.add("fixed_navbar");
-            frameNumber = 100/playbackConst+frameNumber;
+            frameNumber = 50/playbackConst+frameNumber;
             vid.currentTime = frameNumber;
         } else {
         window.onscroll = function() {myFunction()};
 
         function myFunction() {
-            if ( document.body.scrollTop < 1000 || vid.ended) {
+            if ( window.pageYOffset < 1000 || vid.ended) {
                 vid.classList.remove("fixed_navbar");
                 setHeight.style.height = "auto";
             }
           }
           }
-
         });
-
-        
-    
     </script>
 </body>
 </html>
