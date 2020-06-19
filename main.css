@@ -1,40 +1,33 @@
 /* The emerging W3C standard
    that is currently Firefox-only */
+body{
+  text-align: center;
+}
 
-  #screen {
-    scrollbar-width: thin;
-    scrollbar-color: grey white;
-    background-color: #c6d7de;
-   overflow-y: hidden;
-  }
-
-  /* Works on Chrome/Edge/Safari */
-  #screen::-webkit-scrollbar {
-    width: 12px;
-  }
-  #screen::-webkit-scrollbar-track {
-    background: white;
-  }
-  #screen::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border-radius: 20px;
-    border: 3px solid white;
-  }
+#someheight{
+  height: 1000px;
+}
 
 #videoscreen{
   border: none;
 }
 
 #v0 {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 70%;
+
+}
+
+.fixed_navbar{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #set-height {
     display: block;
-    transform: rotate(-90deg);
-  transform-origin: right top;
+}
+
+#test{
+  height: 6000px;
 }
 
